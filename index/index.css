@@ -49,3 +49,40 @@
 .prev:hover {
     background-color: #5b5b5b;
 }
+
+/* For loading screen */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .loadingScreen {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .loadingScreen > h1 {
+    font-size: 3rem;
+    font-family: 'Playfair Display', sans-serif;
+  }
+
+  .loadingScreen video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the screen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Sends the video behind the text */
+  }
