@@ -21,12 +21,13 @@ nextButton.addEventListener('click', () => {
 // Loading screen javascript
 var loadingScreen = document.querySelector(".loadingScreen");
 
-window.addEventListener('load', function() {
-    // Fade out the loading screen
+// Wait for 4 seconds before hiding the loading screen
+setTimeout(function() {
+    // Add a class to fade out the loading screen
     loadingScreen.classList.add('hidden');
     
-    // Wait for the transition to finish before completely removing the element
+    // After the fade-out transition (1s), completely hide it by setting display to 'none'
     setTimeout(function() {
         loadingScreen.style.display = 'none';
-    }, 1000); // matches the transition time (1s)
-});
+    }, 1000); // Wait for 1 second to match the CSS transition duration
+}, 4000); // Wait for 4 seconds
